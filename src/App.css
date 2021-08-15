@@ -1,15 +1,22 @@
+/*----------------------------------------------------------*/
 .App {
+  overflow-y: scroll;
   min-height: 100vh;
   height: 100vh;
   width: 100%;
 }
-.App-Gauges {
+.App-Gauses {
   display: flex;
+  justify-content: space-evenly;
+}
+.App-Switch {
+  display: flex;
+  justify-content: space-evenly;
 }
 .App-LineChart {
   display: grid;
 }
-
+/*----------------------------------------------------------*/
 .Gauges {
   width: 120px;
 }
@@ -25,9 +32,13 @@
   width: 120px;
   height: 120px;
 }
-
+/*----------------------------------------------------------*/
 .LineChart {
-  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 .LineChart-title {
   display: flex;
@@ -40,4 +51,66 @@
   justify-content: center;
   width: 600px;
   height: 600px;
+}
+/*----------------------------------------------------------*/
+.Switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.Switch-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Switch-label {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+.Switch-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.Switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.Switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .Switch-slider {
+  background-color: #2196f3;
+}
+input:focus + .Switch-slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .Switch-slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+.Switch-slider.Switch-round {
+  border-radius: 34px;
+}
+.Switch-slider.Switch-round:before {
+  border-radius: 50%;
 }

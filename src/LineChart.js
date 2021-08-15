@@ -10,7 +10,7 @@ const LineChart = ({
 }) => {
   return (
     <div className="LineChart">
-      <div className="LineChart-title">{title}</div>
+      <div className="LineChart-title">{`Grafica de ${title}`}</div>
       <div className="LineChart-content">
         <Chart
           width={width}
