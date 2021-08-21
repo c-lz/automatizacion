@@ -4,17 +4,43 @@
   min-height: 100vh;
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.App-header {
+  padding: 16px 10%;
+  background-color: rgb(15, 98, 172);
+  color: #fff;
 }
 .App-Gauses {
   display: flex;
   justify-content: space-evenly;
+  padding: 16px 10%;
+  margin: 16px 10%;
+}
+.App-LineChart {
+  padding: 16px 10%;
+  margin: 16px 10%;
 }
 .App-Switch {
   display: flex;
   justify-content: space-evenly;
 }
 .App-LineChart {
+  padding: 16px 10%;
+  margin: 16px 10%;
   display: grid;
+}
+.App-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 10%;
+  background-color: rgb(15, 98, 172);
+  color: #fff;
+}
+.Shadow{
+  box-shadow: 0px 4px 8px 0px #000000;
 }
 /*----------------------------------------------------------*/
 .Gauges {

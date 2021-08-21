@@ -10,7 +10,7 @@ const LineChart = ({
 }) => {
   return (
     <div className="LineChart">
-      <div className="LineChart-title">{`Grafica de ${title}`}</div>
+      <div className="LineChart-title">{`Gráfica de ${title}`}</div>
       <div className="LineChart-content">
         <Chart
           width={width}
@@ -19,26 +19,14 @@ const LineChart = ({
           loader={<div>Loading...</div>}
           data={[
             ["x", variable],
-            ...data,
-            [0, 0],
-            [1, 10],
-            [2, 23],
-            [3, 17],
-            [4, 18],
-            [5, 9],
-            [6, 11],
-            [7, 27],
-            [8, 33],
-            [9, 40],
-            [10, 32],
-            [11, 35],
+            ...data
           ]}
           options={{
             hAxis: {
-              title: "Time",
+              title: "Últimos 100 valores",
             },
             vAxis: {
-              title: "Popularity",
+              title: "Temperatura",
             },
           }}
           rootProps={{ "data-testid": "1" }}
